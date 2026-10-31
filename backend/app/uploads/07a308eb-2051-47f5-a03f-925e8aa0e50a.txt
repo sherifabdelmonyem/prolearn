@@ -1,0 +1,321 @@
+--- الصفحة 1 ---
+
+أرى أن الفكرة جيدة» OSI يمكن تطويرها لتصبح منصة مساعد ذكي لذوي الإعاقة البصرية بدلا من مجرد "ملخص
+.بهذه الطريقة يصبح المشروع قابلا للتوسع ويضيف قيمة أكبر PDF".
+Blind Learning Assistant (BLA)
+أو
+VisionLess AI
+الهدف من المد
+ف من وح
+إنشاء نظام يساعد الأشخاص ذوي الإعاقة البصرية على استلام المحتوى التعليمي عبر واتسابء ثم معالجته بالذكاء
+.الاصطناعي وتحويله إلى محتوى صوتي سهل الاستماع
+المشكلة
+:تعليمية» لكن PDF الشخص الكفيف قد يستلم ملفات
+.يصعب قراءتها ٠.
+.تكون طويلة "٠ |
+.تحتوي على جداول أو صور ٠.
+:الحل هو مساعد ذكي يقوم تلقاتيًا ب
+4 “ a a
+(MVP) النسخة الأولى
+المستخدم
+
+--- الصفحة 2 ---
+
+النظام
+AI Assistant.
+ual gill قناة
+WhatsApp.
+السيناريو
+ربط الحساب -1
+1
+.يربط رقم الواتساب الخاص به
+1
+.يوافق على استقبال الملفات
+استقبال الملف -2
+Sie
+pdt .رياضيات
+1
+.يصل الملف للنظام
+1
+.يحفظ داخل السيرفر
+
+--- الصفحة 3 ---
+
+قراءة الملف -3
+Backend
+{
+.يفحص نوع الملف
+{
+PDF إذا كان
+{
+fay, استخراج النص
+AT معالجة -4
+بعد استخراج النص
+{
+LLM إرسال النص إلى
+7
+GPT
+Gemini
+Claude
+{
+يقوم بعمل
+© vast
+eo تبسيط
+استخراج أهم النقاط ٠
+تقسيم المحتوى إلى أجزاء قصيرة ٠
+
+--- الصفحة 4 ---
+
+تحويل إلى صوت -5
+النص الملخص
+{
+Text To Speech
+{
+إنتاج
+lesson.mp3
+إرسال النتيجة -6
+.تم تلخيص الملف بنجاح
+. اضغط للاستماع
+{
+MP3. يرسل ملف
+7- ra 5 a ae if}
+{
+.يمكنه dale} الإرسال
+{
+.أو طلب إعادة الشرح
+
+--- الصفحة 5 ---
+
+ير ol
+.بدلا من مجرد تلخيمص
+يمكن للمستخدم إرسال رسالة صوتية مثل
+.اشرح لي الصفحة الثالثة
+.صوتيًا AT فيرد
+أو
+Jacl, اختبار على الفصل
+أو
+ما أهم التعريفات؟
+أو
+.اقرأ الملف بالكامل
+Use Cases
+تسجيل الدخول ٠.
+ربط واتساب e
+استقبال الملفات ٠.
+سماع | لملخص ( e
+إعادة التلخيص 5
+اختيار Aa) ٠ه
+حذف الملفات e
+
+--- الصفحة 6 ---
+
+النظام
+٠ استقبال PDF
+استخراج النص e
+٠ Al Summary
+e Text To Speech
+e إرسال MP3
+e تافلملا حفظ
+e لجسلا Las
+Architecture
+WhatsApp
+|
+v
+Webhook
+|
+v
+Backend API
+|
+v v
+PDF Service AI Service
+| |
+v v
+OCR GPT / Gemini
+v
+Text Summary
+|
+v
+Text To Speech
+
+--- الصفحة 7 ---
+
+|
+Vv
+MP3 File
+|
+Vv
+WhatsApp API
+|
+Vv
+المستخدم
+Flow Chart
+Start
+|
+Vv
+استقبال رسالة واتساب
+|
+Vv
+هل يوجد PDFS
+|
+نعم
+Vv Vv
+تحميل الملف إنهاء
+|
+Vv
+استخراج النص
+|
+Vv
+إرسال إلى 7
+|
+Vv
+المحتوى oan
+Vv
+إلى صوت aoa
+Vv
+إنشاء 3
+|
+Vv
+إرسال للمستخدم
+|
+Vv
+
+--- الصفحة 8 ---
+
+End
+“ we au
+As eal) التكنولوجيا
+Mobile
+e Flutter
+Backend
+:أفضل اختيار لهذا المشروع
+e ASP.NET Core Web API
+أو
+٠. NestJS
+Al
+e OpenAI GPT
+٠ Google Gemini (بديل مناسب)
+٠ Azure OpenAT (إذا أردت استضافة مؤسسية)
+استخراج النص من PDF
+إذا كان PDF thai:
+(Bi pata :إذا كان عبارة عن صور ممسوحة
+e Tesseract OCR
+
+--- الصفحة 9 ---
+
+(TTS) تحويل النص إلى صوت
+e Azure Speech
+٠ Google Cloud Text-to-Speech
+٠ ElevenLabs (Ale صوت 82 sal)
+قاعدة البيانات
+٠ PostgreSQL
+الد © ٠ ين
+e Azure Blob Storage
+e AWS 3
+e Firebase Storage
+WhatsApp
+e WhatsApp Business Cloud API
+5 a
+7 مكتبات
+State Management
+e =flutter_bloc
+Dependency Injection
+e get it
+e injectable
+Network
+e dio
+
+--- الصفحة 10 ---
+
+Routing
+٠ go router
+JSON
+e json_serializable
+e freezed
+Audio
+e just audio
+e audio session
+Storage
+e hive
+Accessibility
+(للتغذية الراجعة داخل التطبيق عند الحاجة) flutter_tts °
+٠ speech to text (لإضافة أوامر صوتية مستقبلا)
+Others
+e equatable
+e = intl
+e permission_handler
+e file_picker
+٠ connectivity plus
+e flutter secure storage
+*
+هيكل المشروع
+Backend
+API
+|
+Authentication م
+WhatsApp م
+AI م
+OCR م
+
+--- الصفحة 11 ---
+
+PDF م
+Audio م
+Notification م
+Storage ا
+Flutter
+lib/
+core/
+shared/
+features/
+auth/
+home /
+history/
+player/
+profile/
+settings/
+services/
+models/
+repositories/
+main.dart
+wi? “ a
+فقاعدة البيانات
+Users
+e Id
+e Name
+e Phone
+e WhatsAppNumber
+e PreferredLanguage
+Documents
+e Id
+e Userld
+e FileName
+e =FileUrl
+e §6Status
+
+--- الصفحة 12 ---
+
+Summaries
+e Id
+e Documentld
+e Summary
+e AlIModel
+AudioFiles
+e Id
+e Summaryld
+e Mp3Url
+e Duration
+Logs
+e Id
+e Userld
+e Action
+e CreatedAt
+& “ ىه f ow | we ai
+افكار مستقبليه تزيد من فيمة المشروع
+.التفاعل مع المحتوى عبر الأسئلة AG pall ©
+.إنشاء اختبارات قصيرة من الملف تلقائيًا @
+.باستخدام نموذج متعدد الوسائط PDF وصف الصور والرسومات الموجودة داخل ٠ه
+٠ دعم Word sPowerPoint بالإضافة إلى PDF.
+.إرسال ملخص يومي أو أسبوعي للدروس 0 ٠ه
+.إضافة أوامر صوتية بالكامل داخل التطبيق بحيث لا يحتاج المستخدم إلى التعامل مع الواجهة ٠ Ay peel
+أو |3)WhatsA pp Business Cloud API كنت تستهدف واتساب بشكل مباشرء فمن الأفضل الاعتماد على
+مزود رسمي يدعمهاء لأن الاعتماد على حلول غير رسمية قد يؤدي إلى توقف الخدمة أو حظر الرقم. بهذه الطريقة
+.يكون المشروع قابلا للتشغيل والتوسع بشكل موثوق
